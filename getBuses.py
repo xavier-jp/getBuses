@@ -1,8 +1,6 @@
-#stop naptan ids: 490009117T, 490009117V
-
 import requests #http module to get json data
 
-#'https://api.tfl.gov.uk/StopPoint/490009117T/Arrivals'
+######'https://api.tfl.gov.uk/StopPoint/490009117T/Arrivals'
 
 def getBuses(requestLink):
     #get bus stop arrival prediction
@@ -30,6 +28,7 @@ def getBuses(requestLink):
         except:
             pass
 
+    #organise bus times by first arrival
     ordered = []
     for key in stop:
         for item in stop[key]:
